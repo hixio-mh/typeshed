@@ -1,9 +1,10 @@
 from abc import abstractmethod
 from distutils.dist import Distribution
-from typing import Any, Callable, Iterable, List, Optional, Tuple, Union
+from typing import Any, Callable, ClassVar, Iterable, List, Optional, Tuple, Union
 
 class Command:
-    sub_commands: List[Tuple[str, Optional[Callable[[Command], bool]]]]
+    sub_commands: ClassVar[List[Tuple[str, Optional[Callable[[Command], bool]]]]]
+    distribution: Distribution
     def __init__(self, dist: Distribution) -> None: ...
     @abstractmethod
     def initialize_options(self) -> None: ...

@@ -7,8 +7,8 @@ DEFAULT_PYPIRC: str
 class PyPIRCCommand(Command):
     DEFAULT_REPOSITORY: ClassVar[str]
     DEFAULT_REALM: ClassVar[str]
-    repository: None
-    realm: None
+    repository: Optional[str]
+    realm: Optional[str]
     user_options: ClassVar[List[Tuple[str, Optional[str], str]]]
     boolean_options: ClassVar[List[str]]
     def initialize_options(self) -> None: ...

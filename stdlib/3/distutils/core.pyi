@@ -1,4 +1,5 @@
 from distutils.cmd import Command as Command
+from distutils.config import PyPIRCCommand as PyPIRCCommand
 from distutils.dist import Distribution as Distribution
 from distutils.extension import Extension as Extension
 from typing import Any, List, Mapping, Optional, Tuple, Type, Union

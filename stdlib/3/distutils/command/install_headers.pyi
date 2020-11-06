@@ -1,0 +1,16 @@
+from distutils.cmd import Command
+from typing import ClassVar, List, Optional, Tuple
+
+class install_headers(Command):
+    description: ClassVar[str]
+    user_options: ClassVar[List[Tuple[str, Optional[str], str]]]
+    boolean_options: ClassVar[List[str]]
+
+    install_dir: Optional[str]
+    force: int
+    outfiles: List[str]
+    def initialize_options(self) -> None: ...
+    def finalize_options(self) -> None: ...
+    def run(self) -> None: ...
+    def get_inputs(self) -> List[str]: ...
+    def get_outputs(self) -> List[str]: ...
